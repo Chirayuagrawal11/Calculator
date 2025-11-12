@@ -1,0 +1,99 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      width: 320px;
+    }
+
+    .display {
+      width: 100%;
+      height: 60px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      text-align: right;
+      padding: 10px;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      outline: none;
+    }
+    input::placeholder{
+             color: #fff;
+             font-size: 2rem;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      height: 60px;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .operator {
+      background-color: #f39c12;
+      color: white;
+    }
+
+    .equal {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    .clear {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    button:not(.operator):not(.equal):not(.clear) {
+      background-color: #333;
+      color: white;
+    }
+
+    /* 📱 Media Query for Mobile */
+    @media (max-width: 500px) {
+      .calculator {
+        width: 90%;
+        padding: 15px;
+        
+      }
+
+      .display {
+        height: 50px;
+        font-size: 1.5rem;
+      }
+
+      button {
+        height: 50px;
+        font-size: 1rem;
+      }
+    }
+  
